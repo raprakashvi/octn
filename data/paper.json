@@ -85,16 +85,6 @@
       "src": "assets/img/figures/Metrics_B_Scans.png",
       "alt": "Reconstruction quality metrics",
       "caption": "Quantitative reconstruction quality across the Duke TissueOCT dataset and public OCT datasets."
-    },
-    {
-      "src": "assets/img/figures/Performance_1x_vol.jpg",
-      "alt": "Volumetric reconstruction performance",
-      "caption": "High-fidelity reconstruction with PSNR > 30 dB and training time under 10 seconds."
-    },
-    {
-      "src": "assets/img/figures/Sensor_comparison.png",
-      "alt": "Intraoperative sensor comparison",
-      "caption": "Comparison of intraoperative sensors based on robotic integration and real-time feedback."
     }
   ],
   "video": {
