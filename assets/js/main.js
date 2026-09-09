@@ -57,14 +57,22 @@ async function loadPaper() {
   function el(id){ return document.getElementById(id); }
   function safeText(node, text) { node.textContent = text ?? ""; }
   
-  function makeButton({label, href, style="primary"}) {
-    const a = document.createElement("a");
-    a.className = style === "secondary" ? "btn secondary" : "btn";
-    a.href = href;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.textContent = label;
-    return a;
+  function makeButton({label, href, style="primary", disabled=false, title=""}) {
+    // A button with no href, or one explicitly marked disabled, renders as
+    // inert text rather than a dead link.
+    const isDisabled = disabled || !href;
+    const node = document.createElement(isDisabled ? "span" : "a");
+    node.className = (style === "secondary" ? "btn secondary" : "btn") + (isDisabled ? " disabled" : "");
+    node.textContent = label;
+    if (title) node.title = title;
+    if (isDisabled) {
+      node.setAttribute("aria-disabled", "true");
+    } else {
+      node.href = href;
+      node.target = "_blank";
+      node.rel = "noopener";
+    }
+    return node;
   }
   
   function renderAuthorsPills(container, authors) {
@@ -409,7 +417,7 @@ async function loadPaper() {
   (async function main(){
     const p = await loadPaper();
   
-    document.title = p.shortTitle || p.title;
+    document.title = p.title || p.shortTitle;
   
     safeText(el("paper-venue"), p.venueLine);
     safeText(el("paper-title"), p.title);

@@ -1,53 +1,73 @@
-# Paper Website Template
+# OCTN: Neural OCT Representations for Robot-Guided Precision Intervention
 
-A simple, clean template for creating academic paper websites.
+Project website for **OCTN** (pronounced *"octane"*), an implicit neural representation
+framework that converts volumetric OCT scans into a continuous, differentiable, and
+spatially faithful tissue-intensity field.
 
-**Template by Ravi Prakash** - [raprakashvi.github.io](https://raprakashvi.github.io/)
+🌐 **Website:** [raprakashvi.github.io/octn](https://raprakashvi.github.io/octn/)
+📄 **Paper:** [arXiv:2609.06810](https://arxiv.org/abs/2609.06810)
+🎥 **Video:** [YouTube](https://youtu.be/riD9-W3JwzE)
+
+**Authors:** Ravi Prakash, Ryan P. McNabb, Patrick J. Codd, Shan Lin
+Duke University • Arizona State University
 
 ## Local Preview
 
-To view the site locally:
-
 ```bash
-# Python 3
 python3 -m http.server 8000
-
-# Or Python 2
-python -m SimpleHTTPServer 8000
-
-# Or using Node.js (if you have http-server installed)
-npx http-server
 ```
 
-Then open http://localhost:8000 in your browser.
+Then open <http://localhost:8000>.
 
-## Quick Start
+> The site loads `data/paper.json` via `fetch()`, so it must be served over HTTP —
+> opening `index.html` directly from the filesystem will not work.
 
-1. **Edit `data/paper.json`** - This is the main file where all content lives:
-   - Update paper title, abstract, authors
-   - Add your figures (PNG/JPG) to `assets/img/figures/`
-   - Add author photos to `assets/img/authors/` (or `assets/authors/`)
-   - Add logos to `assets/img/logo/`
-   - Update video YouTube ID if you have one
-   - Add author links (personal websites, etc.)
+## Editing Content
 
-2. **Replace images**:
-   - `assets/img/figures/System_Overview.png` - Main teaser image (top right)
-   - `assets/img/figures/*.png` - Your paper figures
-   - `assets/img/authors/*.jpg` - Author photos
-   - `assets/img/logo/*` - Institution/lab logos
+Nearly all content lives in **`data/paper.json`**: title, abstract, authors, buttons,
+tags, figures, video ID, institution logos, and BibTeX.
 
-3. **Update `index.html`** (optional):
-   - Change page title in `<title>` tag
-   - Update navigation links if needed
+Note that `paper.json` must be **strict JSON** — no trailing commas and no `//` comments.
+If the file fails to parse, the page renders blank. Validate before committing:
 
-4. **Deploy**: Upload to GitHub Pages, Netlify, or any static hosting.
+```bash
+python3 -c "import json; json.load(open('data/paper.json'))"
+```
 
-## Key Files
+Figures referenced from `galleryFigures` must be web-renderable raster images
+(PNG/JPG). Browsers cannot display a PDF inside an `<img>` tag, so export or convert
+vector figures first:
 
-- `data/paper.json` - All content (paper info, authors, figures, etc.)
-- `index.html` - Main HTML structure
-- `assets/css/style.css` - Styling
-- `assets/js/main.js` - JavaScript functionality
+```bash
+pdftoppm -png -r 200 -singlefile figure.pdf figure
+```
 
-That's it! Most changes are in `paper.json`.
+## Layout
+
+- `index.html` — page structure and social/meta tags
+- `data/paper.json` — all content
+- `data/OCTN.pdf` — hosted copy of the paper
+- `assets/css/style.css` — styling
+- `assets/js/main.js` — renders `paper.json` into the page
+- `assets/img/figures/` — paper figures
+- `assets/authors/` — author photos
+- `assets/img/logo/` — institution logos
+
+## Citation
+
+```bibtex
+@misc{prakash2026octn,
+  title         = {OCTN: Neural OCT Representations for Robot-Guided Precision Intervention},
+  author        = {Prakash, Ravi and McNabb, Ryan P. and Codd, Patrick J. and Lin, Shan},
+  year          = {2026},
+  eprint        = {2609.06810},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.RO},
+  doi           = {10.48550/arXiv.2609.06810},
+  url           = {https://arxiv.org/abs/2609.06810}
+}
+```
+
+---
+
+Website template by **Ravi Prakash** — [raprakashvi.github.io](https://raprakashvi.github.io/)

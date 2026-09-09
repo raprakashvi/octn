@@ -78,6 +78,14 @@
   }
   .btn:hover{opacity:0.93}
   .btn.secondary{background:transparent;color:var(--fg)}
+  .btn.disabled{
+    opacity:0.45;
+    cursor:not-allowed;
+    user-select:none;
+    background:transparent;color:var(--muted);
+    border-style:dashed;
+  }
+  .btn.disabled:hover{opacity:0.45}
   .small{color:var(--muted);font-size:0.92rem}
   
   .tags-row{

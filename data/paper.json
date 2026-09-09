@@ -1,104 +1,178 @@
 {
-    "shortTitle": "octn",
-    "venueLine": "arXiv • 2026",
-    "title": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention",
-    "subtitle": "Bringing OCT closer to robots",
-    "doi": "",
-    "lastUpdated": "2026-06-19",
-    "footerLeft": "© 2026 Brain Tool Lab • Duke University | Margin Lab • Arizona State University",
-  
-    "buttons": [
-      { "label": "Paper (arXiv)", "href": "", "style": "primary" },
-      { "label": "PDF", "href": "data/OCTN.pdf", "style": "secondary" },
-      { "label": "Video", "href": "", "style": "secondary" },
-      { "label": "Code", "href": "https://github.com/raprakashvi/", "style": "secondary" }
-    ],
-  
-    "tags": [
-      "Optical Coherence Tomography", 
-      "Implicit Neural Representation", "Robotic Surgery", "Image Reconstruction", "3D Reconstruction",
-      "Image-guided Surgery"
-    ],
-  
-    "affiliationsLine": "Duke University • Arizona State University",
-  
-    "teaser": {
-      "src": "assets/img/figures/octn_wheel.png",
-      "alt": "OCTN introduction figure",
-      "caption": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention."
+  "shortTitle": "OCTN",
+  "venueLine": "arXiv preprint • September 2026",
+  "title": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention",
+  "subtitle": "Bringing OCT closer to robots",
+  "doi": "10.48550/arXiv.2609.06810",
+  "lastUpdated": "2026-09-08",
+  "footerLeft": "© 2026 Brain Tool Lab • Duke University | Margin Lab • Arizona State University",
+  "buttons": [
+    {
+      "label": "Paper (arXiv)",
+      "href": "https://arxiv.org/abs/2609.06810",
+      "style": "primary"
     },
-  
-    "abstract": "Optical coherence tomography (OCT) offers compact, contactless, micron-scale imaging suitable for intraoperative guidance, but native OCT volumes are discretely sampled, anisotropic, and currently inefficient for downstream geometric reasoning and robot integration. We present OCTN (pronounced “octane”), an implicit neural representation framework that converts volumetric OCT scans into a continuous, differentiable, and spatially faithful tissue-intensity field. OCTN uses a two-stage hybrid training strategy that combines supervision from acquired voxels with inter-slice interpolations, preserving B-scan fidelity while improving continuity in sparsely sampled regions. For versatility, we first show that OCTN enables fast volumetric reasoning by storing the learned tissue representation natively on the GPU, supporting intensity-based spatial queries with up to 43× speedup over conventional CPU processing. We then demonstrate OCTN-enabled OCT-guided robotic laser surgery where the continuous tissue representation supports implicit surface discovery and surface-constrained path planning via multiple optimization strategies, including Newton- and SGD-based optimization. Next, OCTN enables reconstruction of dense volumetric structure from sparsely acquired B-scans, while reducing acquisition time by 4× and preserving clinically relevant structures. Across the newly generated Duke TissueOCT dataset and public OCT datasets, OCTN achieves robust high-fidelity reconstruction with PSNR > 30 dB with training time < 10 s and preserves surface consistency within 10μm Chamfer distance relative to baseline reconstruction. The TissueOCT dataset and code are publicly available at raprakashvi.github.io/octn",
-  
-    "featuredFigure": {
-      "src": "assets/img/figures/octn_wheel.png",
-      "alt": "OCTN Introduction",
-      "caption": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention."
+    {
+      "label": "PDF",
+      "href": "data/OCTN.pdf",
+      "style": "secondary"
     },
-  
-    "galleryFigures": [
-      { "src": "assets/img/figures/Paper_Overview.png", "alt": "Introduction Figure", "caption": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention." },
-      { "src": "assets/img/figures/OCTN_Query_speed.pdf", "alt": "Fast Query", "caption": "Volumetric intensity based search within miliseconds." },
-      { "src": "assets/img/figures/OCTN_raster_optimization.pdf", "alt": "Path Planning", "caption": "OCTN enables optimization of robot tool path for smooth motion." },
-      { "src": "assets/img/figures/RealExperiment.pdf", "alt": "Path Planning", "caption": "RATS laser surgery platform powered by OCTN ablating porcine sample." },
-      { "src": "assets/img/figures/Sensor_comparison.pdf", "alt": "Intraoperative Sensors", "caption": "Comparison of intraoperative sensors based on robotic integration and realtime feedback." }
-
-    ],
-  
-    "video": {
-      "youtubeId": "",
-      "title": "OCTN"
+    {
+      "label": "Video",
+      "href": "https://youtu.be/riD9-W3JwzE",
+      "style": "secondary"
     },
-
-  
-    "institutions": [
-      {
-        "name": "Brain Tool Lab",
-        "logoSrc": "assets/img/logo/BTL_out_gif.gif",
-        "href": "https://www.braintoollab.com/",
-        "position": "center-top"
-      },
-      {
-        "name": "Duke Neurosurgery",
-        "logoSrc": "assets/img/logo/DUSOM_neurosurg.jpg",
-        "href": "https://neurosurgery.duke.edu/",
-        "position": "left-bottom"
-      },
-      {
-        "name": "Duke MEMS",
-        "logoSrc": "assets/img/logo/Duke_MEMS.jpeg",
-        "href": "https://mems.duke.edu/",
-        "position": "right-bottom"
-      },
-      {
-        "name": "Duke University",
-        "logoSrc": "assets/img/logo/duke.png",
-        "href": "https://www.duke.edu",
-        "position": "center-bottom"
-      },
-      {
-        "name": "Arizona State University",
-        "logoSrc": "assets/img/logo/ASU-logo.png",
-        "href": "https://www.asu.edu",
-        "position": "center-bottom"
-      },
-      {
-        "name": "MARGIN Lab",
-        "logoSrc": "assets/img/logo/Margin_Lab.jpeg",
-        "href": "https://marginlab.github.io/",
-        "position": "center-top"
-      }
-    ],
-  
-    "acknowledgements": "The authors would like to acknowledge the help of Wen Wang helpful discussions and Vincent Wang for robot-based experiments.",
-  
-    "authors": [
-      { "name": "Ravi Prakash",        "affil": "Duke University", "photo": "assets/authors/Ravi.jpg",     "links": ["https://raprakashvi.github.io/"]},
-      { "name": "Ryan P. McNabb",      "affil": "Duke University", "photo": "assets/authors/Ryan.jpg",     "links": ["https://dukeeyecenter.duke.edu/profile/ryan-mcnabb"] },
-      { "name": "Patrick J. Codd",     "affil": "Duke University", "photo": "assets/authors/Patrick.jpeg",  "links": ["https://www.braintoollab.com/"] },
-      { "name": "Shan Lin",            "affil": "Arizona State University", "photo": "assets/authors/Shan.jpg", "links": ["https://marginlab.github.io/"] }
-    ]
-  
-    // "bibtex": "@misc{yuliarti2025palpaid,\n  title = {PalpAid: Multimodal Pneumatic Tactile Sensor for Tissue Palpation},\n  author = {Yuliarti, Devi and Prakash, Ravi and Cheung, Hiu Ching and Strong, Amy and Codd, Patrick J. and Lin, Shan},\n  year = {2025},\n  eprint = {2512.19010},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.RO},\n  doi = {10.48550/arXiv.2512.19010}\n}"
-  }
-  
+    {
+      "label": "Code",
+      "href": "",
+      "style": "secondary",
+      "disabled": true,
+      "title": "Code release coming soon"
+    }
+  ],
+  "tags": [
+    "Optical Coherence Tomography",
+    "Implicit Neural Representation",
+    "Robotic Surgery",
+    "Image Reconstruction",
+    "3D Reconstruction",
+    "Image-guided Surgery"
+  ],
+  "affiliationsLine": "Duke University • Arizona State University",
+  "teaser": {
+    "src": "assets/img/figures/octn_wheel.png",
+    "alt": "OCTN overview wheel showing the capabilities enabled by the neural OCT representation",
+    "caption": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention."
+  },
+  "abstract": "Optical coherence tomography (OCT) offers compact, contactless, micron-scale imaging suitable for intraoperative guidance, but native OCT volumes are discretely sampled, anisotropic, and currently inefficient for downstream geometric reasoning and robot integration. We present OCTN (pronounced “octane”), an implicit neural representation framework that converts volumetric OCT scans into a continuous, differentiable, and spatially faithful tissue-intensity field. OCTN uses a two-stage hybrid training strategy that combines supervision from acquired voxels with inter-slice interpolations, preserving B-scan fidelity while improving continuity in sparsely sampled regions. For versatility, we first show that OCTN enables fast volumetric reasoning by storing the learned tissue representation natively on the GPU, supporting intensity-based spatial queries with up to 43× speedup over conventional CPU processing. We then demonstrate OCTN-enabled OCT-guided robotic laser surgery where the continuous tissue representation supports implicit surface discovery and surface-constrained path planning via multiple optimization strategies, including Newton- and SGD-based optimization. Next, OCTN enables reconstruction of dense volumetric structure from sparsely acquired B-scans, while reducing acquisition time by 4× and preserving clinically relevant structures. Across the newly generated Duke TissueOCT dataset and public OCT datasets, OCTN achieves robust high-fidelity reconstruction with PSNR > 30 dB with training time < 10 s and preserves surface consistency within 10μm Chamfer distance relative to baseline reconstruction. The TissueOCT dataset and code are publicly available at raprakashvi.github.io/octn",
+  "featuredFigure": {
+    "src": "assets/img/figures/Paper_Overview.jpg",
+    "alt": "OCTN paper overview",
+    "caption": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention."
+  },
+  "galleryFigures": [
+    {
+      "src": "assets/img/figures/Paper_Overview.jpg",
+      "alt": "OCTN paper overview",
+      "caption": "OCTN converts discretely sampled OCT volumes into a continuous, differentiable tissue-intensity field for robot-guided intervention."
+    },
+    {
+      "src": "assets/img/figures/Model_Architecture.jpg",
+      "alt": "OCTN model architecture",
+      "caption": "Model architecture: a two-stage hybrid training strategy combines acquired-voxel supervision with inter-slice interpolation."
+    },
+    {
+      "src": "assets/img/figures/OCTN_Query_speed.png",
+      "alt": "Volumetric query speed comparison",
+      "caption": "Intensity-based volumetric queries run natively on the GPU, with up to 43× speedup over conventional CPU processing."
+    },
+    {
+      "src": "assets/img/figures/OCTN_raster_optimization.jpg",
+      "alt": "Surface-constrained robot path optimization",
+      "caption": "OCTN supports implicit surface discovery and surface-constrained path planning for smooth robot tool motion."
+    },
+    {
+      "src": "assets/img/figures/RealExperiment.jpg",
+      "alt": "RATS laser surgery platform experiment",
+      "caption": "RATS laser surgery platform powered by OCTN ablating a porcine sample."
+    },
+    {
+      "src": "assets/img/figures/Evaluation_B_Scans.jpg",
+      "alt": "Reconstructed B-scan evaluation",
+      "caption": "Dense volumetric reconstruction from sparsely acquired B-scans preserves clinically relevant structures."
+    },
+    {
+      "src": "assets/img/figures/Metrics_B_Scans.png",
+      "alt": "Reconstruction quality metrics",
+      "caption": "Quantitative reconstruction quality across the Duke TissueOCT dataset and public OCT datasets."
+    },
+    {
+      "src": "assets/img/figures/Performance_1x_vol.jpg",
+      "alt": "Volumetric reconstruction performance",
+      "caption": "High-fidelity reconstruction with PSNR > 30 dB and training time under 10 seconds."
+    },
+    {
+      "src": "assets/img/figures/Sensor_comparison.png",
+      "alt": "Intraoperative sensor comparison",
+      "caption": "Comparison of intraoperative sensors based on robotic integration and real-time feedback."
+    }
+  ],
+  "video": {
+    "youtubeId": "riD9-W3JwzE",
+    "title": "OCTN: Neural OCT Representations for Robot-Guided Precision Intervention"
+  },
+  "institutions": [
+    {
+      "name": "Brain Tool Lab",
+      "logoSrc": "assets/img/logo/BTL_out_gif.gif",
+      "href": "https://www.braintoollab.com/",
+      "position": "center-top"
+    },
+    {
+      "name": "MARGIN Lab",
+      "logoSrc": "assets/img/logo/Margin_Lab.jpeg",
+      "href": "https://marginlab.github.io/",
+      "position": "center-top"
+    },
+    {
+      "name": "Duke Neurosurgery",
+      "logoSrc": "assets/img/logo/DUSOM_neurosurg.jpg",
+      "href": "https://neurosurgery.duke.edu/",
+      "position": "left-bottom"
+    },
+    {
+      "name": "Duke University",
+      "logoSrc": "assets/img/logo/duke.png",
+      "href": "https://www.duke.edu",
+      "position": "center-bottom"
+    },
+    {
+      "name": "Arizona State University",
+      "logoSrc": "assets/img/logo/ASU-logo.png",
+      "href": "https://www.asu.edu",
+      "position": "center-bottom"
+    },
+    {
+      "name": "Duke MEMS",
+      "logoSrc": "assets/img/logo/Duke_MEMS.jpeg",
+      "href": "https://mems.duke.edu/",
+      "position": "right-bottom"
+    }
+  ],
+  "acknowledgements": "The authors would like to acknowledge Wen Wang for helpful discussions and Vincent Wang for robot-based experiments.",
+  "authors": [
+    {
+      "name": "Ravi Prakash",
+      "affil": "Duke University",
+      "photo": "assets/authors/Ravi.jpg",
+      "links": [
+        "https://raprakashvi.github.io/"
+      ]
+    },
+    {
+      "name": "Ryan P. McNabb",
+      "affil": "Duke University",
+      "photo": "assets/authors/Ryan.jpg",
+      "links": [
+        "https://dukeeyecenter.duke.edu/profile/ryan-mcnabb"
+      ]
+    },
+    {
+      "name": "Patrick J. Codd",
+      "affil": "Duke University",
+      "photo": "assets/authors/Patrick.jpeg",
+      "links": [
+        "https://www.braintoollab.com/"
+      ]
+    },
+    {
+      "name": "Shan Lin",
+      "affil": "Arizona State University",
+      "photo": "assets/authors/Shan.jpg",
+      "links": [
+        "https://marginlab.github.io/"
+      ]
+    }
+  ],
+  "bibtex": "@misc{prakash2026octn,\n  title         = {OCTN: Neural OCT Representations for Robot-Guided Precision Intervention},\n  author        = {Prakash, Ravi and McNabb, Ryan P. and Codd, Patrick J. and Lin, Shan},\n  year          = {2026},\n  eprint        = {2609.06810},\n  archivePrefix = {arXiv},\n  primaryClass  = {cs.RO},\n  doi           = {10.48550/arXiv.2609.06810},\n  url           = {https://arxiv.org/abs/2609.06810}\n}"
+}
