@@ -280,6 +280,8 @@
     box-shadow:var(--shadow);
   }
   .ack-card{max-width: 980px}
+  .patent-card .prose + .prose{margin-top:10px}
+  .patent-title{font-variant:small-caps;letter-spacing:0.02em}
   
   /* BibTeX */
   .bibtex{
